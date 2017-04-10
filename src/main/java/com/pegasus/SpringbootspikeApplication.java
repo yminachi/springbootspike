@@ -18,7 +18,6 @@ public class SpringbootspikeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS pegasus(" +
-				"id SERIAL, name VARCHAR(255), title VARCHAR(255))");
+		jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS pegasus (id integer not null auto_increment, name varchar(255), title varchar(255), primary key (id));");
 	}
 }
